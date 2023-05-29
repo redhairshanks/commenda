@@ -1,0 +1,11 @@
+default: &default
+  redis:
+    host: <%= ENV["COMMENDA_REDIS_HOST"] %>
+    namespace: <%= ENV["COMMENDA_REDIS_NAMESPACE"] %>
+    port: <%= ENV["COMMENDA_REDIS_PORT"] %>  
+test:
+  <<: *default
+development:
+  <<: *default
+production:
+  <<: *default
