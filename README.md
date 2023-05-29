@@ -1,19 +1,15 @@
 # README
 
-Thought process
+- Tables
+  - Contains all tables
+  - Has list of all rows (rearrangement done in list index)
+  - Has list of all columns (rearrangement done in list index)
 
-- Base table - datatypes
-  - This table contains types of blocks 
-  - id
-  - type - enum
-  - properties - json 
-  - content - json 
+- Columns 
+  - Contains column names and type of column  
 
-- Derived table - block_units
+- Table rows
+  - Each row of table
 
-
-
-class for block - contains polymorphic relations 
-class for table - name, id
-class for table_row - has list of cells
-class for cells - type, text
+- Cells
+  - Each row contains row_id, column_id  

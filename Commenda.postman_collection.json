@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "f76b60bd-f4f5-4b56-975d-74c107b85661",
+		"name": "Commenda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6425862"
+	},
+	"item": [
+		{
+			"name": "Add Row",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"columns\": {\n        \"591d9415-d4c5-4495-baf6-65b7872dc534\": \"Pravin\",\n        \"4f8fa6ae-2c6c-4084-8ad2-fd657b7c5beb\": \"29/05/2023\",\n        \"7445e737-3b51-4284-85c7-abcf1f6a1b45\": \"Male\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/row/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"row",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Row",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/row/5fa46db6-8702-4741-ae7a-dfe4507bdd40/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"row",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Table",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Employees\",\n    \"columns\": [\n        {\n            \"name\": \"name\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"gender\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"Date of Birth\",\n            \"type\": \"date\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/table/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rearrange Row",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/row/aef6d018-caee-4cbe-a889-750b5e13796e/rearrange/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"row",
+						"aef6d018-caee-4cbe-a889-750b5e13796e",
+						"rearrange",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all Rows",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/row/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"row",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Columns",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"columns\": [\n        {\n            \"name\": \"Address\",\n            \"type\": \"text\"\n        },\n        {\n            \"name\": \"Degree\",\n            \"type\": \"text\"\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/columns/add",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"columns",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Column",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/column/69f10427-7eaa-4f76-b341-8b50fe598e72/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"column",
+						"69f10427-7eaa-4f76-b341-8b50fe598e72",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Rearrange column",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/api/table/5fa46db6-8702-4741-ae7a-dfe4507bdd40/column/935ff43a-6d9c-479b-b5ab-ecf61f253585/rearrange/0",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"table",
+						"5fa46db6-8702-4741-ae7a-dfe4507bdd40",
+						"column",
+						"935ff43a-6d9c-479b-b5ab-ecf61f253585",
+						"rearrange",
+						"0"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
